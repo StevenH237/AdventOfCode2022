@@ -6,13 +6,21 @@ public static class Day6Main
 
   public static string Part1()
   {
-    var file = File.ReadAllLines(Filename);
-    return "Not written yet!";
+    string input = File.ReadAllText(Filename);
+
+    return Enumerable.Range(0, input.Length - 3)
+      .Select(x => (Index: x + 4, Chars: input[x..(x + 4)]))
+      .Where(x => x.Chars.Distinct().Count() == 4)
+      .First().Index.ToString();
   }
 
   public static string Part2()
   {
-    var file = File.ReadAllLines(Filename);
-    return "Not written yet!";
+    string input = File.ReadAllText(Filename);
+
+    return Enumerable.Range(0, input.Length - 13)
+      .Select(x => (Index: x + 14, Chars: input[x..(x + 14)]))
+      .Where(x => x.Chars.Distinct().Count() == 14)
+      .First().Index.ToString();
   }
 }

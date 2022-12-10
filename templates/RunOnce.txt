@@ -1,16 +1,17 @@
-public static class RunOnceDayXMain
+public static class DayXMain
 {
   const string Filename = "data/dayX" +
     // "example" +
     ".txt";
   
   static bool WasRun = false;
-  static string Part1Answer = null;
-  static string Part2Answer = null;
+  static string Part1Answer = "";
+  static string Part2Answer = "";
 
   public static void Run()
   {
     WasRun = true;
+    var file = File.ReadAllLines(Filename);
     Part1Answer = "";
     Part2Answer = "";
   }
@@ -18,12 +19,12 @@ public static class RunOnceDayXMain
   public static string Part1()
   {
     if (!WasRun) Run();
-    return Part1Answer();
+    return Part1Answer;
   }
 
   public static string Part2()
   {
     if (!WasRun) Run();
-    return Part2Answer();
+    return Part2Answer;
   }
 }
