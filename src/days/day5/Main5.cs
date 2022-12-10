@@ -23,7 +23,7 @@ public static class Day5Main
 
     // Quick pause for debugging
     // What's the answer if we didn't move any boxes?
-    Console.WriteLine($"The starting configuration of the boxes is {stacks1.Select(stack => stack[0]).FormString()}");
+    // Console.WriteLine($"The starting configuration of the boxes is {stacks1.Select(stack => stack[0]).FormString()}");
 
     // Now let's form the answers
     foreach (string line in instructions)

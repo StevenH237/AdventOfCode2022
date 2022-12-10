@@ -58,7 +58,7 @@ public static class Day3Main
         groupScore -= ((int)'a');
       }
 
-      Console.WriteLine($"Part 2: The total group priority score is {groupScore}.");
+      // Console.WriteLine($"Part 2: The total group priority score is {groupScore}.");
     }
 
     return groupScore.ToString();
